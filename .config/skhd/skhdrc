@@ -1,0 +1,72 @@
+# Switch displays
+cmd - tab : "${HOME}"/.config/yabai/scripts/switch_displays.sh
+# ^ works only when launched from shell
+
+# Move current container to next display and focus that display
+cmd + ctrl - tab : yabai -m window --display recent
+
+# Focus space by index
+ctrl - 1 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 1
+ctrl - 2 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 2
+ctrl - 3 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 3
+ctrl - 4 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 4
+ctrl - 5 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 5
+ctrl - 6 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 6
+ctrl - 7 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 7
+ctrl - 8 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 8
+ctrl - 9 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 9
+ctrl - 0 : "${HOME}"/.config/yabai/scripts/focus_space_by_index.sh 10
+
+# move window to space (index)
+ctrl + shift - 1 : yabai -m window --space 1
+ctrl + shift - 2 : yabai -m window --space 2
+ctrl + shift - 3 : yabai -m window --space 3
+ctrl + shift - 4 : yabai -m window --space 4
+ctrl + shift - 5 : yabai -m window --space 5
+ctrl + shift - 6 : yabai -m window --space 6
+ctrl + shift - 7 : yabai -m window --space 7
+ctrl + shift - 8 : yabai -m window --space 8
+ctrl + shift - 9 : yabai -m window --space 9
+
+# Focus window by direction
+cmd - j : yabai -m window --focus west
+cmd - k : yabai -m window --focus east
+cmd - m : yabai -m window --focus south
+cmd - i : yabai -m window --focus north
+
+# move focused window to occupy the left half of the screen. 
+# cmd + shift - j: yabai -m window --grid 1:2:0:0:1:1
+# cmd + shift - k: yabai -m window --grid 1:2:1:0:1:1
+# cmd + shift - m: yabai -m window --grid 2:1:0:1:1:1
+# cmd + shift - i: yabai -m window --grid 2:1:0:0:1:1
+
+# zoom a window
+ctrl - f: yabai -m window --toggle zoom-fullscreen
+
+# swap a window with an adjacent window
+cmd + shift - j: yabai -m window --swap west
+cmd + shift - k: yabai -m window --swap east
+cmd + shift - m: yabai -m window --swap south
+cmd + shift - i: yabai -m window --swap north
+
+# Switch projects (D1/D6 -> D2/D7 -> ... -> D5/D10 -> D1/D6)
+cmd - h : "${HOME}"/.config/yabai/scripts/cycle_projects.sh
+cmd + shift - h : "${HOME}"/.config/yabai/scripts/cycle_projects_reverse.sh
+
+# Swap spaces across two displays
+cmd + shift - tab : "${HOME}"/.config/yabai/scripts/swap_spaces.py
+
+# opens iTerm2
+cmd - return : "${HOME}"/.config/yabai/scripts/open_iterm2.sh
+
+# opens Google Chrome
+alt - return : "${HOME}"/.config/yabai/scripts/open_chrome.sh
+
+# Scratchpad - terminal
+# cmd - z : "${HOME}"/.config/yabai/scripts/scratchpad.sh
+
+# move the windows by 90deg
+alt - tab : yabai -m space --rotate 270
+
+# switch to first spaces on display
+ctrl + alt - 1 : "${HOME}"/.config/yabai/scripts/switch_to_home.sh

@@ -1,0 +1,8 @@
+{
+  "suggest.enablePreview": true,
+  "python.linting.mypyEnabled": true,
+  "markdownlint.config": {
+    "default": true,
+    "line_length": false
+  }
+}
